@@ -1,5 +1,6 @@
-
-<h1 class="title">{{configData.title}}</h1>
-<button class="button button-block button-positive" ng-click="goToInscribe()">
-	Inscribe
-</button>
+<div ng-style="{'background-image': backgroundApp}">
+	<h1 class="title">{{configData.title}}</h1>
+	<button class="button button-block button-positive initial-btn" ng-click="goToInscribe()">
+		{{configData.homeButton}}
+	</button>
+</div>

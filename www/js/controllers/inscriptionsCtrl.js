@@ -2,13 +2,18 @@
 	'use strict';
 	nyMarathon.app.controller('InscriptionsCtrl', function($scope, $location, $http, $ionicPopup) {
 		$scope.inscription = {};
+		$scope.config = nyMarathon.configData;
+		$scope.backgroundApp = 'url(' + nyMarathon.configData.backgroundApp + ')';
+
 		$scope.saveInscription = function(inscription) {
-			var url = 'http://localhost:8080/api/inscription';
+			var config = nyMarathon.configData,
+				url = config.inscriptionEndPoint;
+
  			if(validateForm(inscription)) {
  				$http.post(url, inscription).then(function (res){
 					$ionicPopup.alert({
-						title:'Congratulations!',
-						template:'You are enrolled in the marathon'
+						title: config.successTitle,
+						template: config.successMsg
 					});
 						
 				}, function() {
@@ -18,13 +23,12 @@
 					});
 				});	
  			}
-			
 		}
 
 		$scope.backHome = function() {
 			$location.path('/');
 		}
-		
+
 		function validateForm(inscription) {
 			var isValid = true,
 				regexp;

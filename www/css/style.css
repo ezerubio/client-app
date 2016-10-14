@@ -1,0 +1,18 @@
+/* Empty. Add your own CSS if you like */
+.pane {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+.title {
+	text-align: center;
+	padding-top: 20px;
+}
+.error {
+	border: 3px solid red;
+}
+
+.initial-btn {
+	position: fixed;
+	bottom: 20px;
+}
