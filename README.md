@@ -10,9 +10,6 @@ Install ionic:
 
 	npm install -g cordova ionic
 
-Once dependencies are installed run with
-
-	npm start will start in http://localhost:8080
 
 Download from repository and do in the project folder:
 
