@@ -18,10 +18,6 @@ Download from repository and do in the project folder:
 
 	npm install
 
-Once dependencies are installed run with
-
-	npm start will start in http://localhost:8080
-
 Add platform (ios or android):
 
 	cordova platform add ios 
