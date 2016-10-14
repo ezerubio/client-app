@@ -1,6 +1,29 @@
 
 <h1 class="title">Form</h1>
 
+<form name="inscriptionForm" ng-submit="saveInscription(inscription)" novalidate >
+	<div ng-repeat="field in config.fields" class="list list-inset">
+		<div ng-if="field.type !== 'select'" ng-class="{'error': field.error}">
+			<label class="item item-input item-stacked-label">
+			<span class="input-label">{{field.label}}<em ng-if="field.isRequired">*</em></span>
+			<input type="{{field.type}}" placeholder="{{field.placeholder}}" ng-model="inscription[field.name]">
+		</div>
+		<div ng-if="field.type === 'select'" ng-class="{'error': field.error}">
+			<label class="item item-input item-select">
+				<div class="input-label">
+					{{field.label}}<em ng-if="field.isRequired">*</em>
+				</div>
+				<select ng-model="inscription[field.name]" >
+				  <option ng-repeat="value in field.values" >{{value}}</option>
+				</select>
+			</label>
+		</div>	
+	</div>
+	<button class="button button-block button-positive" type="submit">
+		Submit
+	</button>
+</form>
+
 <button class="button button-block button-positive" ng-click="backHome()">
 	back
 </button>
