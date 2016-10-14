@@ -4,6 +4,9 @@
 		$scope.inscription = {};
 		$scope.config = nyMarathon.configData;
 		$scope.backgroundApp = 'url(' + nyMarathon.configData.backgroundApp + ')';
+		$scope.btnColor = nyMarathon.configData.btnColor;
+		$scope.secondaryBtnColor = nyMarathon.configData.secondaryBtnColor;
+		
 
 		$scope.saveInscription = function(inscription) {
 			var config = nyMarathon.configData,

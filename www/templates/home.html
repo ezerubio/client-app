@@ -1,6 +1,11 @@
 <div ng-style="{'background-image': backgroundApp}">
 	<h1 class="title">{{configData.title}}</h1>
-	<button class="button button-block button-positive initial-btn" ng-click="goToInscribe()">
+	<div class="counter">
+		<p>{{configData.paragraph1}}</p>
+		<p> {{timeTo}} </p>
+		<p>{{configData.paragraph2}}</p>
+	</div>
+	<button class="button button-block button-positive initial-btn" ng-click="goToInscribe()" ng-style="{'background-color': btnColor}">
 		{{configData.homeButton}}
 	</button>
 </div>
